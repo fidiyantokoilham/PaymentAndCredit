@@ -55,7 +55,7 @@ public class WelcomeController {
             Customer customer = (Customer) session.getAttribute("admin2");
             Admin admin = (Admin) session.getAttribute("user");
   
-            customer.setCustomerName("feb");
+            customer.setCustomerName(customerBean.getCustomerName());
             customer.setCustomerUpdatedby(admin.getUsername());
             SimpleDateFormat tggl = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
             customer.setCustomerUpdatedtime(tggl.format(new Date()));
